@@ -1,0 +1,60 @@
+<div class="page-container">
+    <h3>Feedback</h3>
+    <div id="registrationForm">
+        <div class="formContainer">
+            <div class="col-md-6 mr-auto">
+                <form [formGroup]="feedbackForm" action="#!" (ngSubmit)="onSubmit()">
+                    <div *ngIf="f.name.errors && submitted" style="color: red">
+                        {{f.name.errors.FNameValidation}}
+                    </div>
+                    <label>Name</label><br>
+                    <input formControlName="name" type="text" id="defaultContactFormName" placeholder="Dave Smith"
+                        [ngClass]="{'errorClass': f.name.errors && submitted}">
+                    <br>
+
+                    <div *ngIf="f.companyName.errors && submitted" style="color: red">
+                        {{f.companyName.errors.CNameValidation}}
+                    </div>
+                    <label>Company Name</label><br>
+                    <input formControlName="companyName" type="text" id="defaultContactFormName" placeholder="Smith Inc"
+                        [ngClass]="{'errorClass': f.companyName.errors && submitted}">
+                    <br>
+
+                    <div *ngIf="f.jobTitle.errors && submitted" style="color: red">
+                        {{f.jobTitle.errors.JTitleValidation}}
+                    </div>
+                    <label>Job Title</label><br>
+                    <input formControlName="jobTitle" type="text" id="defaultContactFormName" placeholder="CEO"
+                        [ngClass]="{'errorClass': f.jobTitle.errors && submitted}">
+                    <br>
+
+                    <div *ngIf="f.years.errors && submitted" style="color: red">
+                        {{f.years.errors.YValidation}}
+                    </div>
+                    <label>Years in Current Role</label><br>
+                    <input formControlName="years" type="number" id="defaultContactFormName" placeholder="15"
+                        [ngClass]="{'errorClass': f.years.errors && submitted}">
+                    <br>
+
+                    <div *ngIf="f.email.errors && submitted" style="color: red">
+                        {{f.email.errors.emailValidation}}
+                    </div>
+                    <label>Email</label><br>
+                    <input formControlName="email" type="text" id="defaultContactFormName"
+                        placeholder="dave@example.com" [ngClass]="{'errorClass': f.email.errors && submitted}">
+                    <br>
+
+                    <div *ngIf="f.marketing.errors && submitted" style="color: red">
+                        {{f.marketing.errors.marketingValidation}}
+                    </div>
+                    <label>What do you like about marketing corp?</label><br>
+                    <textarea formControlName="marketing" cols="30" rows="10" placeholder="It's just great"
+                        [ngClass]="{'errorClass': f.marketing.errors && submitted}">
+                    </textarea><br>
+
+                    <button class="subBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600");
+
+.page-container {
+  width: 30%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.errorClass {
+  border-color: red !important;
+}
+
+#registrationForm {
+  padding: 5%;
+  font-family: textFont;
+  text-align: left;
+  font-weight: 470;
+  color: black;
+
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .subBtn {
+    font-family: textFont;
+    color: white;
+    background-color: orange;
+    border: none;
+    font-size: 28px;
+  }
+}
