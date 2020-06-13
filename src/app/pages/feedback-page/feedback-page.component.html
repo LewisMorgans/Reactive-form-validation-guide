@@ -1,51 +1,50 @@
 <div class="page-container">
-    <h3>Feedback</h3>
-    <div id="registrationForm">
+    <div id="feedbackForm">
         <div class="formContainer">
             <div class="col-md-6 mr-auto">
                 <form [formGroup]="feedbackForm" action="#!" (ngSubmit)="onSubmit()">
-                    <div *ngIf="f.name.errors && submitted" style="color: red">
-                        {{f.name.errors.FNameValidation}}
+                    <div *ngIf="f.name.errors && submitted">
+                        <h4>{{f.name.errors.FNameValidation}}</h4>
                     </div>
                     <label>Name</label><br>
-                    <input formControlName="name" type="text" id="defaultContactFormName" placeholder="Dave Smith"
+                    <input formControlName="name" type="text" placeholder="Dave Smith"
                         [ngClass]="{'errorClass': f.name.errors && submitted}">
                     <br>
 
-                    <div *ngIf="f.companyName.errors && submitted" style="color: red">
-                        {{f.companyName.errors.CNameValidation}}
+                    <div *ngIf="f.companyName.errors && submitted">
+                        <h4>{{f.companyName.errors.CNameValidation}}</h4>
                     </div>
                     <label>Company Name</label><br>
-                    <input formControlName="companyName" type="text" id="defaultContactFormName" placeholder="Smith Inc"
+                    <input formControlName="companyName" type="text" placeholder="Smith Inc"
                         [ngClass]="{'errorClass': f.companyName.errors && submitted}">
                     <br>
 
-                    <div *ngIf="f.jobTitle.errors && submitted" style="color: red">
-                        {{f.jobTitle.errors.JTitleValidation}}
+                    <div *ngIf="f.jobTitle.errors && submitted">
+                        <h4>{{f.jobTitle.errors.JTitleValidation}}</h4>
                     </div>
                     <label>Job Title</label><br>
-                    <input formControlName="jobTitle" type="text" id="defaultContactFormName" placeholder="CEO"
+                    <input formControlName="jobTitle" type="text" placeholder="CEO"
                         [ngClass]="{'errorClass': f.jobTitle.errors && submitted}">
                     <br>
 
-                    <div *ngIf="f.years.errors && submitted" style="color: red">
-                        {{f.years.errors.YValidation}}
+                    <div *ngIf="f.years.errors && submitted">
+                        <h4>{{f.years.errors.YValidation}}</h4>
                     </div>
                     <label>Years in Current Role</label><br>
-                    <input formControlName="years" type="number" id="defaultContactFormName" placeholder="15"
+                    <input formControlName="years" type="number" placeholder="15"
                         [ngClass]="{'errorClass': f.years.errors && submitted}">
                     <br>
 
-                    <div *ngIf="f.email.errors && submitted" style="color: red">
-                        {{f.email.errors.emailValidation}}
+                    <div *ngIf="f.email.errors && submitted">
+                        <h4>{{f.email.errors.emailValidation}}</h4>
                     </div>
                     <label>Email</label><br>
-                    <input formControlName="email" type="text" id="defaultContactFormName"
-                        placeholder="dave@example.com" [ngClass]="{'errorClass': f.email.errors && submitted}">
+                    <input formControlName="email" type="text" placeholder="dave@example.com"
+                        [ngClass]="{'errorClass': f.email.errors && submitted}">
                     <br>
 
-                    <div *ngIf="f.marketing.errors && submitted" style="color: red">
-                        {{f.marketing.errors.marketingValidation}}
+                    <div *ngIf="f.marketing.errors && submitted">
+                        <h4>{{f.marketing.errors.marketingValidation}}</h4>
                     </div>
                     <label>What do you like about marketing corp?</label><br>
                     <textarea formControlName="marketing" cols="30" rows="10" placeholder="It's just great"
